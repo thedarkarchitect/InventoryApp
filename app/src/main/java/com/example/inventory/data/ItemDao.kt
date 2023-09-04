@@ -8,8 +8,7 @@ import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
-@Dao//makes the interface the Data Access Object in the app create a persistence layer from the rest of the app
-//this  isolation follows the single-responsibility principle
+@Dao//makes the interface the Data Access Object in the app create a persistence layer from the rest of the app, this  isolation follows the single-responsibility principle
 interface ItemDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)//this makes sure any conflict is ignored by telling room the strategy when a new item is entered
     suspend fun insert(item: Item)

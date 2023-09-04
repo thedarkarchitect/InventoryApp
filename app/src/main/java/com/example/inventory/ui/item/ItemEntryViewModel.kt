@@ -35,11 +35,11 @@ class ItemEntryViewModel(private val itemsRepository: ItemsRepository) : ViewMod
         }
     }
 
-    suspend fun saveItem(){
-        //this is a suspend function cuz its called to insert an item into the room database
+    suspend fun saveItem() {
+        //this is a suspend function because its called to insert an item into the room database
 //        The data is added to db in a non-blocking way
-        if (validateInput()){
-            itemsRepository.insertItem(itemUiState.itemDetails.toItem())
+        if (validateInput()) {//this checks itemUiState is valid
+            itemsRepository.insertItem(itemUiState.itemDetails.toItem())//then changes it item so that db can understand it and then save it    }
         }
     }
 }
