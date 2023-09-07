@@ -17,6 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.inventory.R.string
+import com.example.inventory.ui.home.HomeScreen
 import com.example.inventory.ui.navigation.InventoryNavHost
 
 /**
@@ -26,6 +27,10 @@ import com.example.inventory.ui.navigation.InventoryNavHost
 @Composable
 fun InventoryApp(navController: NavHostController = rememberNavController()) {
     InventoryNavHost(navController = navController)
+//    HomeScreen(
+//        navigateToItemEntry = { /*TODO*/ },
+//        navigateToItemUpdate =
+//    )
 }
 
 /**

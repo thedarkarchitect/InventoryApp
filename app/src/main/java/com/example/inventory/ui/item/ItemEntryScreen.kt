@@ -57,10 +57,11 @@ fun ItemEntryScreen(
         ItemEntryBody(
             itemUiState = viewModel.itemUiState,
             onItemValueChange = viewModel::updateUiState,
-            onSaveClick = { coroutineScope.launch {
-                viewModel.saveItem() //this saves the item when button clicked
-                navigateBack()//this close the entry screen and takes up back to previous screen in pop stack
-            }},
+            onSaveClick = {
+                coroutineScope.launch {
+                    viewModel.saveItem() //this saves the item when button clicked
+                    navigateBack()//this close the entry screen and takes up back to previous screen in pop stack
+                } },
             modifier = Modifier
                 .padding(innerPadding)
                 .verticalScroll(rememberScrollState())

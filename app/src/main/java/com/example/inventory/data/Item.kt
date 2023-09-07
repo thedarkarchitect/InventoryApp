@@ -14,4 +14,8 @@ class Item(
     val name: String,
     val price: Double,
     val quantity: Int
-)
+) {
+    fun copy(quantity: Int): Item {
+        return Item(id, name, price, quantity)
+    }
+}
